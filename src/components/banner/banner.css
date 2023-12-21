@@ -1,0 +1,117 @@
+.banner {
+  position: relative;
+  width: 100%;
+  height: 550px;
+  overflow: hidden;
+}
+
+.banner__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.banner:hover .banner__image {
+  transform: scale(1.1);
+}
+
+.banner__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.banner__content {
+  position: absolute;
+  bottom: 20px;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  align-items: flex-start;
+  color: #fff;
+  margin-left: 2.5%;
+  margin-right: 2.5%;
+}
+
+.banner__title {
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.banner__description {
+  font-size: 14px;
+  margin-bottom: 20px;
+  max-width: 600px;
+}
+
+.banner__buttons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.banner__button {
+  border: none;
+  background-color: #0a1030;
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 15px 25px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.banner__button:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.3);
+  transition: left 0.3s ease;
+  z-index: 1;
+}
+
+.banner__button:hover:before {
+  left: 0;
+}
+
+.banner__button:hover {
+  background-color: transparent;
+  outline: 4px solid #0a1030;
+  color: white;
+  font-weight: bolder;
+}
+
+@media (max-width: 768px) {
+  .banner {
+    height: 400px;
+  }
+
+  .banner__content {
+    bottom: 10px;
+    left: 10px;
+  }
+
+  .banner__title {
+    font-size: 20px;
+  }
+
+  .banner__description {
+    font-size: 12px;
+  }
+
+  .banner__button {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+}

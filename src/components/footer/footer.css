@@ -1,0 +1,24 @@
+footer {
+  background-color: #090b13;
+  width: 100%;
+  position: sticky;
+  bottom: 0;
+  padding: 2%;
+}
+
+@media (min-width: 1024px) {
+  footer {
+    padding: 1%;
+  }
+}
+
+footer .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.linked-in {
+  font-size: 2rem;
+  border-radius: 100%;
+}
